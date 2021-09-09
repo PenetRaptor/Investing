@@ -1,0 +1,2443 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Investment</title>
+  <link rel="stylesheet" href="Investment_files/bootstrap.css">
+  <link href="Investment_files/css.css" rel="stylesheet">
+  <link rel="stylesheet" href="Investment_files/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="Investment_files/main.css" rel="stylesheet" type="text/css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="https://in24.club/static/main/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://in24.club/static/main/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://in24.club/static/main/icons/favicon-16x16.png">
+  <link rel="manifest" href="https://in24.club/static/main/icons/site.webmanifest">
+  <link rel="mask-icon" href="https://in24.club/static/main/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="https://in24.club/static/main/icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="/static/main/icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+
+
+    meter::-webkit-meter-bar { /* Firefox Pseudo Class */
+      background: transparent;
+      border: solid 2px #ffffff;
+      border-left: none;
+    }
+
+    meter::-webkit-meter-optimum-value {
+      background: #00dc00;
+    }
+
+    meter::-webkit-meter-even-less-good-value {
+      background: #00dc00;
+    }
+
+    meter::-webkit-meter-suboptimum-value {
+      background: #00dc00;
+    }
+
+    .firsr-meter::-webkit-meter-optimum-value {
+      border-left: solid 2px #ffffff;
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+
+    .firsr-meter::-webkit-meter-bar {
+      border-top-left-radius: 50%;
+      border-bottom-left-radius: 50%;
+    }
+
+    .last-meter::-webkit-meter-optimum-value {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+
+    .last-meter::-webkit-meter-bar {
+      border-top-right-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+
+    @media (max-width: 387px) {
+      .pahelhead-brand a {
+        font-size: 23px !important;
+      }
+
+      .pahelhead-brand a span {
+        font-size: 23px !important;
+      }
+    }
+
+    #curr-num {
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+    .demo-btn {
+      font-size: 25px; font-weight: 300; margin-left: 15px;padding: .25em .8em;
+    }
+
+    @media (max-width: 422px) {
+      .demo-btn {
+        font-size: 15px!important;
+        padding: .6em;
+      }
+    }
+
+    @media (max-width: 387px) {
+      .pahelhead-brand a span {
+        font-size: 15px!important;
+      }
+    }
+
+    .buy_time_block input {
+      display: none;
+    }
+
+    .buy_time_block input + label {
+      padding: 15px;
+      border: solid 1px #02FF98;
+      border-radius: 10px;
+      width: 90px;
+      text-align: center;
+    }
+
+    .buy_time_block input:checked + label {
+      background-color: #02FF98;
+    }
+
+    .buy_time_block input + label p {
+      font-size: 10px;
+      color: #02FF98;
+    }
+
+    .buy_time_block input + label h5 {
+      color: #02FF98;
+    }
+
+    .buy_time_block input:checked + label p, .buy_time_block input:checked + label h5 {
+      color: #000000;
+    }
+
+    .refill_system.active, .usdt_system.active, .wthd_system.active {
+      background-color: #06CC00!important;
+      border-color: #06CC00!important;
+    }
+  </style>
+</head>
+<body>
+<input type="hidden" id="hidden-cb">
+<!-- particles.js container -->
+<div id="particles-js"><canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="998" height="699"></canvas></div>
+<div class="panel_content d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <h3 class="pahelhead-brand text-info" style="padding-top: 0">
+        
+        <a href="https://in24.club/main/" style="color: #66ffff!important; text-decoration: none!important;font-weight: 300;font-size: 25px;">IC</a>
+        
+
+        <a href="https://in24.club/main/" class="nav-link _help-link" style="text-decoration: none!important;font-size: 25px; display: inline-block; border: none"><i class="fas fa-home"></i></a>
+
+      </h3>
+      <nav class="nav nav-panelhead justify-content-center">
+      <a href="https://in24.club/static/docs/zayavlenie_IC.pdf?ver=2.1.0" target="_blank" class="nav-link _help-link" style="text-decoration: none!important;font-size: 25px; display: inline-block; border: none; padding: 0;"><i class="fas fa-file-contract"></i></a>
+        <a class="nav-link _help-link" href="#!" data-toggle="modal" data-target="#nModal" style="border: none;font-size: 25px;padding: 0;">
+          <i class="fas fa-bell"></i>
+          </a>
+        <a class="nav-link _help-link" href="#!" id="q-button" data-toggle="modal" data-target="#qModal" style="border: none;font-size: 25px;padding: 0;"><i class="far fa-question-circle"></i></a>
+        <a class="nav-link" href="https://in24.club/logout/"><img style="width: 27px" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUyMC4zNDkgNTIwLjM0OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTIwLjM0OSA1MjAuMzQ5OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgY2xhc3M9IiI+PGc+PGc+Cgk8cGF0aCBkPSJNNDQ1LjIyMywwSDE0Mi41ODljLTYuNjgzLDAtMTIuMTA1LDUuNDIzLTEyLjEwNSwxMi4xMDV2MTgwLjk3OWgxNi42NWMtNS4wMDYtNi4zOTItNy43MjUtMTQuMjI0LTcuNzI1LTIyLjQ2NyAgIGMtMC4wMDYtOS43NjQsMy44LTE4Ljk0MywxMC43MDgtMjUuODQ1YzEuNDIxLTEuNDIxLDIuOTczLTIuNjg3LDQuNTgzLTMuODQ1VjI0LjIxMWgyNzguNDE3djguNjk3bC0xMjcuMTA0LDkyLjI4NXYzOTUuMTU1ICAgbDEyNy43OTYtOTIuNzg3YzEuNjI2LDQuNzcsNi4wOTUsOC4yMjgsMTEuNDE0LDguMjI4YzYuNjg1LDAsMTIuMTA1LTUuNDI2LDEyLjEwNS0xMi4xMDVWMTIuMTA1ICAgQzQ1Ny4zMjgsNS40MTcsNDUxLjkwNywwLDQ0NS4yMjMsMHogTTM1NC4wMzEsMzMxLjk3M2MtNS43MSwwLTEwLjQ2OC03LjA0Ni0xMS42OTEtMTYuNDg1aC0xMy42M3YtMTAuNTkyaDEzLjgxOSAgIGMxLjQ0OC04Ljg2LDYuMDE3LTE1LjM4LDExLjQ5LTE1LjM4YzYuNjM4LDAsMTIuMDExLDkuNDk4LDEyLjAxMSwyMS4yMzFDMzY2LjA0MiwzMjIuNDY4LDM2MC42NjMsMzMxLjk3MywzNTQuMDMxLDMzMS45NzN6ICAgIE0xNTAuMTIyLDMxNC40NzFjMS40MjQsMS40MTIsMi45NjcsMi42NzgsNC41NzIsMy44MjR2MTA1LjM4OWMwLDYuNjgtNS40MjYsMTIuMTA1LTEyLjEwNSwxMi4xMDUgICBjLTYuNjgzLDAtMTIuMTA1LTUuNDI2LTEyLjEwNS0xMi4xMDVWMjY2LjEzOWgxNi42NUMxMzUuOTQ4LDI4MC40NjYsMTM2LjkzNSwzMDEuMjcxLDE1MC4xMjIsMzE0LjQ3MXogTTIzNi43MDYsMjE4LjM4NSAgIGM0LjgxNyw0LjgxNyw0LjgxNywxMi42MDgsMCwxNy40MjVsLTU4Ljk5NSw1OS4wMDFjLTIuNDAzLDIuMzk0LTUuNTU2LDMuNjA1LTguNzA5LDMuNjExYy0zLjE1My0wLjAwNi02LjMwNy0xLjIwNi04LjcxLTMuNjExICAgYy00LjgxMS00LjgxNy00LjgwNS0xMi42MTMsMC0xNy40MTlsMzcuOTc0LTM3Ljk3N0g3NS4zMzZjLTYuODAzLDAtMTIuMzE1LTUuNTEyLTEyLjMxNS0xMi4zMTUgICBjMC02LjgwMyw1LjUwNi0xMi4zMTgsMTIuMzIxLTEyLjMxOGgxMjIuOTE3bC0zNy45NjgtMzcuOTc0Yy00LjgwNS00LjgwNS00LjgxMS0xMi42MDgsMC0xNy40MTMgICBjNC44MTItNC44MTIsMTIuNjE0LTQuODEyLDE3LjQyNSwwTDIzNi43MDYsMjE4LjM4NXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0Y5RjlGOSIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD4KPC9nPjwvZz4gPC9zdmc+"></a>
+      </nav>
+    </div>
+  </header>
+  <div class="panel_menu" style="width: 100%; background: #434343; margin-top: 16px; margin-bottom: 16px; padding-top: 15px; padding-bottom: 15px">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="id__holder">
+            <h1>ID: 16436 <a href="#!" class="_help-link " id="copy-btn" data-clipboard-text="http://in24.club/main/?code=16436"><i class="fas fa-link"></i></a></h1>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="rating__holder _low">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6" style="width: 50%">
+                  
+                    <h1 style="color: white; margin-bottom: 0">Tl</h1>
+                    <p style="color: white">too low</p>
+                  
+                </div>
+                <div class="col-sm-6" style="text-align: right; padding-top: 15px; width: 50%">
+                  <p style="color: white; margin-bottom: 0">статус-баллы</p>
+                  <p style="color: white">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="progress_holder">
+            <div class="container-fluid">
+              <div class="row">
+                <meter class="firsr-meter" max="3500" value="0" style="width: 3%"></meter>
+                <meter min="3500" max="10000" value="0" style="width: 31.3%"></meter>
+                <meter min="10000" max="150000" value="0" style="width: 31.3%"></meter>
+                <meter min="150000" max="500000" value="0" style="width: 31.3%;"></meter>
+                <meter class="last-meter" min="500000" max="500000" value="0" style="width: 3%"></meter>
+              </div>
+            </div>
+          </div>
+          <p style="display: inline-block; color: white; font-size: 12px;margin-bottom: 0;">
+            <small>3 500</small>
+          </p>
+          <p style="display: inline-block; color: white; font-size: 12px;margin-bottom: 0;position: absolute; bottom: 0;left: 31.3%">
+            <small>10 000</small>
+          </p>
+          <p style="display: inline-block; color: white; font-size: 12px;margin-bottom: 0;position: absolute; bottom: 0;left: 62.6%">
+            <small>150 000</small>
+          </p>
+          <p id="last-subt" style="display: inline-block; color: white; font-size: 12px;margin-bottom: 0;position: absolute; bottom: 0;">
+            <small>500 000</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="text" style="display: none;" id="ref-uid" value="http://in24.club/main/?code=16436">
+  <a href="https://in24.club/static/docs/zayavlenie_IC.pdf?ver=2.1.0" target="_blank"><div style="display: block; width: 100%; background-color: #DD4B39; color: #ffffff; text-align: center; padding: 5px; margin-bottom: 15px;">Не верифицирован</div></a>
+  
+    <a href="#!" class="panel-btn" data-toggle="modal" data-target="#buyTimeModal" style="border: solid 2px #02FF98; padding: 15px; border-radius: 15px; width: 100%;text-align: center;">
+      <p style="color: #02FF98; margin-bottom: 5px">Активен до</p>
+        <p style="color: #dd4b39; margin-bottom:0;"><strong>05.08.2021</strong></p>
+    </a>
+  
+  
+  
+  <div class="panel_menu justify-content-around" style="width: 100%; background: #434343; margin-top: 16px; margin-bottom: 16px">
+    <a href="#!" id="accounts">Счета</a>
+    <a href="#!" id="statistics">Статистика</a>
+    <a href="#!" id="faq">FAQ</a>
+  </div>
+  <div class="panel_section" id="accounts_section">
+    <div class="panel_content__block">
+      <div class="text-center" style="padding-top: 30px; padding-bottom: 30px;">
+        <h5 class="text-light mb-0" style="font-size: 2rem"> 0,00 $</h5>
+        <small class="text-light">текущий счет</small>
+      </div>
+      <div class="row">
+        
+        <div class="col-sm text-center"><a href="#!" class="panel-btn" data-toggle="modal" data-target="#addModal">ПОПОЛНИТЬ<br>76,5 р/$</a>
+        </div>
+        <div class="col-sm text-center"><a href="#!" class="panel-btn " data-toggle="modal" style="margin-bottom: 15px" data-target="#disModal">ВЫВЕСТИ<br>72,5 р/$</a>
+        </div>
+        
+      </div>
+      
+        <div class="row">
+          <div class="col-sm text-center"><a href="#!" class="panel-btn" data-toggle="modal" data-target="#transModal">ПЕРЕВЕСТИ</a>
+          </div>
+        </div>
+      
+    </div>
+    <div style="width: 100%; height: 1px; background: #434343; margin-top: 16px; margin-bottom: 16px"></div>
+    
+    <div class="panel_content__block">
+      <div class="text-center" style="padding-top: 30px; padding-bottom: 30px;">
+        <h5 class="text-light mb-0" style="font-size: 2rem">
+          0,00 $</h5>
+        <small class="text-light">депозит</small>
+      </div>
+      <div class="row">
+        <div class="col-sm text-center"><a href="#!" class="panel-btn disabled" data-toggle="tooltip" data-placement="top" title="" data-original-title="На вашем текущем счету недостаточно средств для внесения депозита.">ИНВЕСТИРОВАТЬ</a>
+        </div>
+        <div class="col-sm-12 text-center" style="margin-top: 15px">
+        
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm text-center" style="padding: 15px">
+          <input type="checkbox" class="ios8-switch" id="checkbox-1">
+          <label for="checkbox-1" style="color: white;font-size: 16px">Автоматический реинвест</label>
+        </div>
+      </div>
+    </div>
+    <div class="panel_content__block">
+      <div style="width: 100%; border: solid 2px #66FFFF; padding: 15px">
+        <div class="row">
+          <div class="col-sm text-left text-light mb-0">ОПЦИОН</div>
+        </div>
+        <h5 class="text-light" style="font-size: 1.8rem; margin-bottom: 1.8rem">5000$</h5>
+        <h5 class="text-light" style="font-size: 1rem;">Срок работы: 100 дней</h5>
+        <h5 class="text-light" style="font-size: 1rem; margin-bottom: 1.5rem;">Доходность: 5 - 20% в месяц</h5>
+        <div class="row">
+          <div class="col-sm-6 text-center"><a href="#!" class="panel-btn option-btn" data-toggle="modal" data-target="#optionModal">ИНВЕСТИРОВАТЬ</a></div>
+        </div>
+      </div>
+      
+    </div>
+    <div style="width: 100%; height: 1px; background: #434343; margin-top: 16px; margin-bottom: 16px"></div>
+    <div class="panel_content__block">
+      <div class="row" style="padding-bottom: 15px">
+        <div class="col-sm text-left text-light">ПАРТНЕРСКАЯ ПРОГРАММА</div>
+      </div>
+      
+      
+      
+      
+      <div class="row" style="margin-bottom: 15px">
+        <div class="col-sm-8"><p class="text-light part-subheader" style="margin-bottom: 0">Оборот структуры</p></div>
+        <div class="col-sm-4"><p class="text-info part-value" style="margin-bottom: 0">0,00$</p></div>
+      </div>
+      <div class="row" style="margin-bottom: 15px">
+        <div class="col-sm-8"><p class="text-light part-subheader" style="margin-bottom: 0">Оборот структуры опционов</p></div>
+        <div class="col-sm-4"><p class="text-info part-value" style="margin-bottom: 0">0,00$</p></div>
+      </div>
+      <div class="row" style="margin-bottom: 15px">
+        <div class="col-sm-8"><p class="text-light part-subheader" style="margin-bottom: 0">Всего активных партнеров</p>
+        </div>
+        <div class="col-sm-4"><p class="text-info part-value" style="margin-bottom: 0">0</p></div>
+      </div>
+      <div class="row" style="margin-bottom: 15px">
+        <div class="col-sm-8"><p class="text-light part-subheader" style="margin-bottom: 0">Заработано по партнерской
+          программе</p></div>
+        <div class="col-sm-4"><p class="text-info part-value">
+          $</p></div>
+      </div>
+    </div>
+    <div class="panel_content__block">
+      <div class="row" style="padding-bottom: 15px">
+        <div class="col-sm text-center text-light">СТРУКТУРА ПАРТНЕРОВ</div>
+      </div>
+      
+        <div class="col-sm-12">
+          <h4 style="color: white;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: 300;">У вас пока нет партнеров</h4>
+        </div>
+      
+      <div style="width: 100%; height: 1px; background: #434343; margin-top: 16px; margin-bottom: 16px"></div>
+      <div class="social-buttons">
+        <a href="https://www.instagram.com/in24_club/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/joinchat/FpVQ4w-lKRyYSb4EXTvjYw" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://t.me/joinchat/AAAAAE2KeYdPZRMvShq-Tg" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="panel_section" id="statistics_section" style="padding: 0 1.5rem">
+    <h6 style="font-style: italic;color: white; margin-bottom: 15px;">Показать</h6>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="statisticsRadio1" name="statisticsRadio" class="custom-control-input" checked="checked">
+      <label class="custom-control-label" for="statisticsRadio1">Пополнения текущего счета</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="statisticsRadio2" name="statisticsRadio" class="custom-control-input">
+      <label class="custom-control-label" for="statisticsRadio2">Пополнение/создание депозита</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="statisticsRadio3" name="statisticsRadio" class="custom-control-input">
+      <label class="custom-control-label" for="statisticsRadio3">Начисления дивидендов</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="statisticsRadio4" name="statisticsRadio" class="custom-control-input">
+      <label class="custom-control-label" for="statisticsRadio4">Начисления реферальных</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="statisticsRadio8" name="statisticsRadio" class="custom-control-input">
+      <label class="custom-control-label" for="statisticsRadio8">Начисления лидерских бонусов</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="statisticsRadio5" name="statisticsRadio" class="custom-control-input">
+      <label class="custom-control-label" for="statisticsRadio5">Вывод средств</label>
+    </div>
+    <div class="custom-control custom-radio">
+      <input type="radio" id="statisticsRadio6" name="statisticsRadio" class="custom-control-input">
+      <label class="custom-control-label" for="statisticsRadio6">Пожертвования</label>
+    </div>
+    
+    <div class="custom-control custom-radio">
+        <input type="radio" id="statisticsRadio10" name="statisticsRadio" class="custom-control-input">
+        <label class="custom-control-label" for="statisticsRadio10">Начисление реферальных с опционов</label>
+    </div>
+    <div class="custom-control custom-radio">
+        <input type="radio" id="statisticsRadio9" name="statisticsRadio" class="custom-control-input">
+        <label class="custom-control-label" for="statisticsRadio9">Входящие переводы</label>
+    </div>
+    <div class="custom-control custom-radio">
+        <input type="radio" id="statisticsRadio12" name="statisticsRadio" class="custom-control-input">
+        <label class="custom-control-label" for="statisticsRadio12">Исходящие переводы</label>
+    </div>
+    <div class="custom-control custom-radio">
+        <input type="radio" id="statisticsRadio11" name="statisticsRadio" class="custom-control-input">
+        <label class="custom-control-label" for="statisticsRadio11">Продления</label>
+    </div>
+
+    <div class="statictics_holder" id="refills">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="deposits" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="income" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        <div class="col-sm text-md-center">
+          <small class="text-light">Коэффициент</small>
+        </div>
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="partner_income" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+
+    <div class="statictics_holder" id="leader_income" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+
+    <div class="statictics_holder" id="withdraw" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="donations" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="crowd_inc" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="opts_inc" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        =
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="transfers_inc" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        <div class="col-sm">
+          <small class="text-light">От кого</small>
+        </div>
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="transfers_out" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        <div class="col-sm">
+          <small class="text-light">Кому</small>
+        </div>
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Сумма</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+    <div class="statictics_holder" id="payments" style="display: none">
+      <div class="row" style="border-bottom: solid 1px #535353; padding-bottom: 10px">
+        <div class="col-sm">
+          <small class="text-light">Дата</small>
+        </div>
+        <div class="col-sm text-md-right">
+          <small class="text-light text-md-right">Срок продления</small>
+        </div>
+      </div>
+      <div class="row">
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel_section" id="faq_section">
+    <div id="accordion">
+      
+        <div class="card show">
+          <div class="card-header" id="heading1">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                Что такое INVESTMENT CLUB и за счет чего формируется прибыль?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+            <div class="card-body">
+              INVESTMENT CLUB – это площадка
+коллективного инвестирования (краудинвестинг),
+объединяющая инвесторов в закрытый трейдинг - клуб с
+доходностью по депозитам до 200% годовых. Прибыль клуба формируется за 
+счёт инвестиционных инструментов ( биржевой торговли, арбитражного 
+управления, вложений в венчурные краткосрочные проекты и др.)
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading2">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                С чего начать и как работает клуб?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse2" class="collapse" aria-labelledby="heading2" data-parent="#accordion">
+            <div class="card-body">
+              Добро пожаловать в INVESTMENT CLUB😊👋🏻 
+Наша команда всегда работает над тем, чтобы инструменты  инвестирования 
+были понятными, удобным и высокодоходными💰
+С чего начать и что необходимо знать в самом начале❓🤔
+
+1️⃣ Внимательно ознакомьтесь с презентацией клуба (pdf файл на главной 
+странице сайта in24.club ) или по ссылке https://t.me/c/1267912834/21099
+      
+
+2️⃣  Изучите правила работы клуба в разделе FAQ личного кабинета
+
+3️⃣ Добавьтесь в телеграмм - чат IC по ссылке 
+https://t.me/joinchat/S5LQgjEsbCddO-Nj , а также подпишитесь на 
+Instagram клуба по ссылке 
+https://www.instagram.com/invites/contact/?i=s2b1h60ni22j&amp;utm_content=44gqncv
+ 
+В наших пабликах много полезной информации, статистики и новостей☺️ Да и
+ просто поболтать с кем-то можно 🤭
+
+4️⃣ Зарегистрируйтесь на бирже Binance  по ссылке 
+https://accounts.binance.me/ru/register?ref=C47NEIP6 для пополнения 
+счета и вывода средств через USDT.
+Регистрация по данной ссылке даст вам 10% скидку на комиссии по торговым
+ операциям😉
+Если вам необходима более подробная консультация по работе с биржей 
+Binance и помощь в пополнении /снятии средств через неё смело 
+обращайтесь к нашему крипто-специалисту Игорю в телеграмм @IgorInvesttop
+ 👍✅
+
+
+5️⃣ Верифицируйте  свой аккаунт в IC. Для прохождения верификации 
+скачайте заявление в личном кабинете ( значок «Листочек» 📄в верхнем 
+меню или нажмите поле «НЕ ВЕРИФИЦИРОВАН» ).
+Заполните все поля заявления, указав номер карты( с указанием 
+наименования  банка и ФИО), кодовое слово для платежей( без символов и 
+знаков препинания) и другую информацию. 
+Заявление отправьте на почту клуба in24club@mail.ru с электронной почты,
+ привязанной непосредственно к вашему ID. В тексте письма также можете 
+указать адрес USDT -счета ( при наличии), для вывода средств в 
+криптовалюте. 
+Обработка заявлений на верификацию  осуществляется ежедневно. При 
+успешной верификации в личном кабинете появится поле « ВЕРИФИЦИРОВАН» 
+В случае, если верификация не происходит в течении 10 суток с момента 
+отправки заявления, обратитесь в поддержку
+через почту in24club@mail.ru или через значок « Колокольчик» 🔔в верхнем
+ меню личного кабинета ( писать в личку руководству нет никакой 
+необходимости, всё решается в стандартном режиме через поддержку). 
+P.S.
+❗️Если Вы отправляете дополнения: криптосчёт или изменения данных без 
+заявления, обязательно в письме❗️( но не в теме письма ) указывайте id и
+ криптосчёт, либо id и желаемые реквизиты( реквизиты без id и id без 
+реквизитов обрабатываться не будут!!!)
+❗️Если функции по переводам/выводам в личном кабинете доступны, но при 
+этом горит поле «Не верифицирован», необходимо обновить информацию о 
+верификации, отправив новое заявление! 
+
+🛠При появлении нестандартных вопросов у всех есть аплайнер( вышестоящий
+ наставник, человек, который пригласил вас в проект)🔍✏️ 
+Если ничего не помогло- пишите в поддержку ( значок «Колокольчик» 🔔 в 
+верхнем меню личного кабинета). Наш администратор Кристина всегда 
+поможет разрешить Любой вопрос ✊🏻
+Не переживайте по поводу срочности решения вашего вопроса. Обычно ответ 
+приходит в течении суток🕰 За почти 3 года работы IC не возникло НИ 
+ОДНОЙ неразрешимой проблемы😉
+
+Всем успехов и хорошего профита вместе с Investment 
+Club💰💴💵💰💴💵💰💶💷
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading3">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                Какая сумма необходима  для начала работы и открытия депозита?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse3" class="collapse" aria-labelledby="heading3" data-parent="#accordion">
+            <div class="card-body">
+              Минимальная сумма депозита 1000$. В рамках действующих 
+промоушенов и акций минимальная сумма депозита может меняться на 
+определённый срок.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading4">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                Как пополнить счёт и создать депозит?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordion">
+            <div class="card-body">
+              Пополнение счета происходит путем перевода средств с 
+вашего счета  на корпоративный счет клуба через сервис платежей QIWI, 
+либо через USDT. Для пополнения нажмите кнопку «Пополнить» в личном 
+кабинете и следуйте инструкции.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading5">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                Как можно проверить, сколько на самом деле зарабатывает компания?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordion">
+            <div class="card-body">
+              Информация о инструментах и направлениях инвестирования IC
+ предоставляется партнёрам со статусом Gold и выше. Статистика по 
+трейдингу является закрытой информацией. Инвестору со статусом Gold и 
+выше по запросу может быть показана лишь результативность работы 
+инструмента и сумма средств находящаяся в нём
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading6">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                Какие гарантии возвратности средств?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordion">
+            <div class="card-body">
+              Средства клуба находятся на сертифицированных торговых 
+площадках (Finam, Freedom Finance, Binance, Forex club, Alpari и др.) с 
+отличной репутацией, что обеспечивает безопасность  размещения активов, 
+ но не гарантирует  доход.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading7">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                Какие виды доходов можно получать в INVESTMENT CLUB помимо дивидендов?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordion">
+            <div class="card-body">
+              Помимо дивидендов, каждый Инвестор может принять участие в
+ «Реферальной» и "Лидерской" программах, для этого необходимо 
+рекомендовать наш Клуб знакомым и друзьям, эффективно  строить  
+партнёрскую  сеть,  участвовать  в Краудфандинг программах.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading8">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                Что такое «Реферальная программа»?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordion">
+            <div class="card-body">
+              Каждый действующий инвестор с открытым депозитом может 
+рассчитывать на дополнительные доходы, рекомендуя наш клуб знакомым и 
+друзьям, которые в сою очередь тоже могут приглашать к партнерству своих
+ знакомых. Таким образом формируется Ваша партнерская структура 
+(команда). И именно с доходов всей Вашей структуры в 5 уровнях 
+(поколениях) Вам гарантированно будет начисляться 10% с доходов по 
+Депозитам и 2% с доходов по Опционам ( в момент их обработки). Условие  
+получения  вознаграждения  по "Реферальной программе"  наличие  депозита
+  от 2500$, либо  опциона.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading9">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                Что такое статус-баллы и  "Лидерская программа "?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordion">
+            <div class="card-body">
+              Ежедневно ваша активность в Investment club просчитывается
+ в виде баллов📌
+Баллы позволяют получить  статус в системе  от Bronse до Platinum. 
+Статус, в свою очередь, даёт дополнительные привилегии и доход💰💰💰
+К примеру, на Gold  этот дополнительный доход сейчас составляет около 
+25$ в день, на Platinum около 50$ 🔥😃🏆
+Важно, что эти начисления со временем увеличиваются, так как зависят от 
+объема прибыли всего клуба🔥
+Статус определяется ежедневно в 14.00 мск исходя из текущего количества 
+баллов по следующим статьям:
+🔹За каждый 1$ личных инвестиций - 7 баллов
+🔹За каждый 1$ инвестиций структуры( приглашённых партнёров)-1 балл
+🔹За каждого человека (приглашённого партнёра) в структуре- 100 баллов
+🔹За каждый 1$ пожертвований на краудфандинг - 30 баллов
+Баллы суммируются и отображаются на шкале в личном кабинете📈
+Исходя из количества баллов на конкретный день определяется статус:
+🥉BRONZE - 3.500 баллов
+🥈SILVER - 10.000 баллов
+🥇GOLD - 150.000 баллов
+🏅PlATINUM - 500.000 баллов
+Ежедневные начисления за статусы вы можете наблюдать в личном кабинете в
+ разделе СТАТИСТИКА - НАЧИСЛЕНИЯ ЛИДЕРСКИХ БОНУСОВ📝🔍
+Составьте ваш личный план роста в IC и выйдете на новый уровень 
+привилегий и доходов 💵💶💷💎
+P.S. 🔻
+Для партнёров со статусом PLATINUM готовятся индивидуальные предложения 
+по инвестированию в доходную недвижимость, производство, закрытые 
+высокодоходные фонды, НИОКР и тд. Также в процессе разработки VIP - 
+программы лояльности в сфере туризма, отдыха, здоровья и 
+долголетия🔆♻️❤️ Условие для участия в "Лидерской программе":  наличие 
+ОПЦИОНА,  либо  Депозита  не менее  2500$.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading12">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                Как правильно пригласить и зарегистрировать человека в Клубе?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse12" class="collapse" aria-labelledby="heading12" data-parent="#accordion">
+            <div class="card-body">
+              Отправьте реферальную ссылку или свой ID номер с адресом 
+сайта знакомому. Подскажите ему, как правильно зарегистрироваться и 
+пополнить счёт. Начисление реферальных на Ваш счет будет происходить 
+автоматически с момента открытия партнером депозита.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading13">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                В какое время происходит начисление дивидендов и бонусов по партнерской программе?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse13" class="collapse" aria-labelledby="heading13" data-parent="#accordion">
+            <div class="card-body">
+              Ежедневно в 14.00 по московскому времени программа 
+подсчитывает общий объем депозитов вашей структуры, начисляет дивиденды и
+ переводит партнерское вознаграждение Вам на текущий счет.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading14">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                Как часто можно пополнять счет и депозит?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse14" class="collapse" aria-labelledby="heading14" data-parent="#accordion">
+            <div class="card-body">
+              Текущий счёт и Депозит можно пополнить в любой момент. При
+ пополнении текущего счета с внешнего кошелька учитывайте время 
+обработки заявки – 24 часа.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading15">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                Какой срок работы депозита и как вывести его по окончанию?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse15" class="collapse" aria-labelledby="heading15" data-parent="#accordion">
+            <div class="card-body">
+              Срок работы депозита 30 дней с момента его открытия. При 
+каждом новом пополнении (реинвесте), депозит автоматически 
+пролонгируется на новые 30 дней. По окончанию работы депозита денежные 
+средства возвращаются на текущий счет и становятся доступны к выводу в 
+соответствии с Правилами и порядком вывода. 
+Важно: при нулевом балансе депозита выплаты по дивидендам и начисления 
+по партнерской программе прекращаются.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading16">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                Какие комиссии по выводу средств?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse16" class="collapse" aria-labelledby="heading16" data-parent="#accordion">
+            <div class="card-body">
+              Клуб не берет комиссии за ввод/вывод средств. Ввод/вывод 
+осуществляется по внутреннему курсу клуба ($/рубль) который отображается
+ в кнопках "Пополнить" и Вывести" в личном кабинете. При выводе/вводе 
+USDT комиссия составляет 2,5 % от суммы
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading17">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                Как можно проверить движение средств и транзакции по счету?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse17" class="collapse" aria-labelledby="heading17" data-parent="#accordion">
+            <div class="card-body">
+              В разделе сайта «СТАТИСКИКА» отображены все движения по 
+вашим счетам. Зеленым цветом отмечены подтвержденные операции, синим - 
+операции в процессе обработки.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading18">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                Почему текущий счет может быть как положительным (+), так и отрицательным (-)?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse18" class="collapse" aria-labelledby="heading18" data-parent="#accordion">
+            <div class="card-body">
+              Клуб осуществляет реальную деятельность, а именно – 
+торговлю на финансовой бирже. При торговле используются различные методы
+ и стратегии (работа по сигналам, аналитическая и новостная торговля, 
+роботизированная торговля и т.д.) Так как рынок не поддается 100% 
+планированию возможно краткосрочные потери (торговля в минус), что и 
+отображается на состоянии текущего дневного отчета.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading19">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                Как скоро начинают начисляться дивиденды с момента открытия депозита?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse19" class="collapse" aria-labelledby="heading19" data-parent="#accordion">
+            <div class="card-body">
+              Дивиденды начисляются через рабочие сутки после открытия депозита в 14.00 московского времени.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading20">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                На какую сумму и как часто я могу пополнить уже действующий депозит?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse20" class="collapse" aria-labelledby="heading20" data-parent="#accordion">
+            <div class="card-body">
+              Действующий депозит можно пополнить в любое время на сумму не менее 100$.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading21">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                Могу ли я вывести депозит в полном объеме в случае необходимости?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse21" class="collapse" aria-labelledby="heading21" data-parent="#accordion">
+            <div class="card-body">
+              Вывод депозита возможен через 30 дней с момента его 
+открытия или последнего пополнения. При досрочном  выходе  удерживается 
+комиссия  5% от суммы  депозита.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading22">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                Как мне можно связаться с руководством INVESTMENT CLUB?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse22" class="collapse" aria-labelledby="heading22" data-parent="#accordion">
+            <div class="card-body">
+              Инвестор в любой момент может задать свой вопрос 
+администрации клуба через службу поддержки. Раздел «ЗАДАТЬ ВОПРОС» в 
+личном кабинете. Учитывайте время обработки запроса - до 10 дней.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading23">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                Что делать если при пополнении счета и переводе средств баланс текущего счета так и не пополнился?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse23" class="collapse" aria-labelledby="heading23" data-parent="#accordion">
+            <div class="card-body">
+              Если баланс текущего счета в кабинете не пополнился в 
+течении 24 часов с момента перевода вами средств, пожалуйста, обратитесь
+ в службу поддержки (значок "?" в личном кабинете). В качестве 
+подтверждения желательно приложить скрин (фотографию чека) перевода 
+средств с вашего внешнего кошелька.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading24">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                Как связаться со службой поддержки и в течении какого времени она отвечает?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse24" class="collapse" aria-labelledby="heading24" data-parent="#accordion">
+            <div class="card-body">
+              Адресовать свой вопрос вы можете в любое время. Обработка 
+входящих сообщений и ответы на них осуществляются с 8.00 до 18.00 по 
+московскому времени.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading25">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                Существует ли риск убыточной финансовой деятельности клуба?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse25" class="collapse" aria-labelledby="heading25" data-parent="#accordion">
+            <div class="card-body">
+              Любая инвестиционная деятельность подразумевает под собой 
+риски. Но можете быть уверены, что руководство и аналитики клуба делают 
+свою работу профессионально для достижения максимального положительного 
+результата в среднесрочной перспективе. Минимальный  финансовый план 
+клуба - увеличение депозита в течении года на 100%.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading26">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                Как распределяются общие доходы компании и откуда берутся деньги на оплату партнерского вознаграждения?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse26" class="collapse" aria-labelledby="heading26" data-parent="#accordion">
+            <div class="card-body">
+              Все заработанные средства клуб распределяет в следующей 
+пропорции: 50% - оплата дивидендов инвесторам по их депозитам, 25%- 
+выплаты по Партнерской программе; 25% - оплата работы трейдеров и 
+аналитиков, расходы на администрирование и информационную безопасность 
+клуба.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading27">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                В каком порядке происходит вывод средств?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse27" class="collapse" aria-labelledby="heading27" data-parent="#accordion">
+            <div class="card-body">
+              Заявку на вывод средств с текущего счета можно сделать не 
+чаще 1 раза в месяц, в любой день недели. Поступление денег на ваш 
+расчётный счёт или карту (реквизиты указанные в Заявлении) будет 
+произведено в рублях по внутреннему курсу конвертации ($/рубль) в 
+соответствии со следующим планом:
+Заявки  до 1000$ - 5 дней
+
+Заявки от 1000$(включительно) до 3000$ -  10 дней
+
+Заявки от 3000$(включительно) до 10.000$ -  20 дней
+
+Заявки от10.000$(включительно) до 30.000$ -  50 дней
+
+Заявки более 30.000$ - 100 дней
+
+Вывод в USDT осуществляется от 100$ не чаще чем 1 раз в месяц с 
+комиссией 2,5% на ваш USDT -счёт, привязанный к аккаунту, в соответсвии 
+со следующим планом:
+
+Заявки  до 1000USDT - 3 дня
+
+Заявки от 1000USDT(включительно) до 3000USDT -  5 дней
+
+Заявки от 3000USDT(включительно) до 10.000USDT -  10 дней
+
+Заявки от10.000USDT(включительно) до 30.000USDT-  20 дней
+
+Заявки более 30.000USDT - 30 дней
+
+Досрочный (вне плановый) вывод средств с текущего счета НЕ ВОЗМОЖЕН!
+
+Для вывода средств обязательно отправьте заполненную форму с вашими 
+платёжными реквизитами (номера банковских карт, счетов, USDT-счёт и т.д)
+  на почту in24club@mail.ru. Форму заявления можно взять в личном 
+кабинете : значок "Листок" в верхнем меню. При отправке заявления, 
+учитывайте время на его обработку в течении 10 дней.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading28">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                Что я получаю взамен при переводе средств проектам в РАЗДЕЛЕ КРАУДФАНДИНГ?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse28" class="collapse" aria-labelledby="heading28" data-parent="#accordion">
+            <div class="card-body">
+              За каждый доллар вашей поддержки тому или иному проекту Вы
+ получаете 30 статус - баллов. Что в свою очередь отражается на вашем 
+рейтинге в клубе, даёт новые возможности, увеличивает доход.  К тому же 
+ваша помощь может поощряться дополнительно самими резидентами 
+краудфандинг площадки.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading29">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                Что такое кнопка АВТОРЕИНВЕСТ в личном кабинете сайта?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse29" class="collapse" aria-labelledby="heading29" data-parent="#accordion">
+            <div class="card-body">
+              Данная опция позволяет включить автоматическое пополнение 
+действующего депозита при накоплении на текущем счету суммы от 100$ и 
+выше. Учитывайте, что при каждом таком пополнении срок работы депозита 
+обновляется. Автореинвест не работает при нулевом счёте депозита.
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading31">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                Что такое ОПЦИОН?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse31" class="collapse" aria-labelledby="heading31" data-parent="#accordion">
+            <div class="card-body">
+              ОПЦИОН - это размещение средств на срок 100 дней суммой 
+5000$. Покупка Опциона производится с текущего счета нажатием на кнопку 
+"Инвестировать". После покупки, карточка опциона станет зелёной и через 
+день начнётся увеличение его стоимости. На 101-ый день Опцион со всей 
+накопленный стоимостью выйдет на текущий счёт и будет доступен к выводу 
+(или повторному реинвесту)
+            </div>
+          </div>
+        </div>
+      
+        <div class="card ">
+          <div class="card-header" id="heading32">
+            <h5 class="mb-0">
+              <button class="faq_btn btn btn-link text-left" data-toggle="collapse" data-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                Как взаимодействовать со службой поддержки и что делать если появился Срочный вопрос?
+              </button>
+            </h5>
+          </div>
+
+          <div id="collapse32" class="collapse" aria-labelledby="heading32" data-parent="#accordion">
+            <div class="card-body">
+              Для оптимизации работы  Investment Club , улучшения 
+скорости и качества обслуживания участников клуба вводится следующий 
+регламент работы поддержки и взаимодействия с руководством клуба:
+
+✅Обработка заявлений на верификацию будет осуществляться дважды в 
+неделю: среда и суббота. Задать вопросы, сделать уточнения можно также в
+ среду и субботу с 10.00 до 18.00 (мск). Ответственный за раздел 
+поддержки Владимир Шмурак  , писать сообщениями в Telegram на адрес 
+@forestgamp8
+
+✅Технические вопросы, вопросы по мероприятиям и программам IC, правилам и
+ алгоритмам работы сайта, вопросы связанные с досрочным или 
+индивидуальным выводом (пополнением ) средств, ошибочными переводами 
+будут обрабатываться с понедельника по пятницу с 8.00 до 16.00 (мск). 
+Ответственный за раздел поддержки Алексей Попов , писать сообщениями в 
+Telegram на адрес 
+@AlexseyPopov
+
+Уважаемые партнёры, огромная просьба планировать свою работу под данный 
+регламент и не тревожить вне его рамках, какой бы срочности вопрос у вас
+ не бы
+
+Тем, кто недавно к нам присоединился,  настоятельно рекомендуем, прежде 
+чем писать в поддержу, внимательно ознакомиться с презентацией клуба 
+(pdf файл на главной странице сайта in24.club ), а также с правилами в 
+разделе FAQ личного кабинета
+            </div>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="text-align: center">
+        <h5 class="modal-title" id="addModalTitle" style="margin: auto;">Пополнение счета</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute; top: 1rem; right: 1rem;">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row" style="margin-bottom: 15px;">
+          <div class="col-6" style="padding-right: 5px;">
+            <div style="width: 100%; display: block; padding: 10px; border: solid 2px #333333;text-align: center;" id="show_rur_refill" class="refill_system active">Пополнить<br>в RUB</div>
+          </div>
+          <div class="col-6" style="padding-left: 5px;">
+            <div style="width: 100%; display: block; padding: 10px; border: solid 2px #333333;text-align: center;" id="show_usdt_refill" class="refill_system">Пополнить<br>в USDT</div>
+          </div>
+        </div>
+        <div id="rur-input-holder">
+          <form id="add-form">
+            <div class="form-group">
+              <input id="currency-select" type="hidden" style="padding: 8px 16px; height: 48px; font-size: 1.25rem; margin-bottom: 10px; visibility: hidden" name="p_system" value="RQ" required="">
+              
+              <input type="number" class="form-control form-control-lg" id="addAmountInput" min="50" name="amount_help" aria-describedby="addHelp" placeholder="Сумма в рублях">
+              <input type="hidden" id="AmountHiddenInput" name="correct_amount">
+              <small id="addHelp" class="form-text text-muted">Введите сумму не менее 6500 руб.</small>
+              <p style="margin-top: 15px; margin-bottom: 0; text-align: center">На текущий счет зачислится</p>
+              <p id="true_amount" style="text-align: center; color: #007200; font-size: 1.5rem; margin-bottom: 0">0$</p>
+              <p id="rate-holder" style="text-align: center;">(курс 1$ = 76,50 руб.)</p>
+  
+  
+  
+  
+  
+  
+              <p></p>
+              
+              <p>При переводе в Комментарии обязательно
+                укажите: <strong>«пополнение счета ID16436»</strong>, а также учитывайте комиссию платежной системы.
+              </p>
+            </div>
+          </form>
+        </div>
+        <div id="usdt-input-holder" style="display: none;">
+            <form id="usdt-add-form">
+              <div class="form-group">
+                <input id="usdt-currency-select" type="hidden" style="padding: 8px 16px; height: 48px; font-size: 1.25rem; margin-bottom: 10px; visibility: hidden" name="usdt_p_system" value="usdt" required="">
+                
+                <input type="number" class="form-control form-control-lg" id="UsdtAddAmountInput" min="50" name="usdt_amount_help" aria-describedby="addHelp" placeholder="Сумма в USDT">
+                <input type="hidden" id="UsdtAmountHiddenInput" name="usdt_correct_amount">
+                <small id="UsdtAddHelp" class="form-text text-muted">Введите сумму не менее 100 USDT.</small>
+                <small id="netHelp" class="form-text text-muted" style="margin-top: 15px; margin-bottom: 3px;">Сеть</small>
+                <div class="row" style="margin-bottom: 15px;">
+                  <div class="col-6" style="padding-right: 5px;">
+                    <div style="width: 100%; display: block; padding: 10px; border: solid 2px #333333;text-align: center;" id="use_erc" class="usdt_system active">ERC20</div>
+                  </div>
+                  <div class="col-6" style="padding-left: 5px;">
+                    <div style="width: 100%; display: block; padding: 10px; border: solid 2px #333333;text-align: center;" id="use_trc" class="usdt_system">TRC20</div>
+                  </div>
+                </div>
+                <input type="hidden" id="u_system" name="usdt_system" value="erc20">
+                <p style="margin-top: 15px; margin-bottom: 0; text-align: center">На текущий счет зачислится</p>
+                <p id="usdt_true_amount" style="text-align: center; color: #007200; font-size: 1.5rem; margin-bottom: 0">0 USDT</p>
+                <p style="text-align: center;">(с учетом комиссии 2,5%)</p>
+
+                <p>Зачисление средств на текущий счет происходит в течении 24 часов с момента отправки средств</p>
+              </div>
+            </form>
+        </div>
+      </div>
+      <div class="modal-footer" style="display: block">
+
+        <button type="button" class="w-100 btn btn-dark" id="add-btn" style="margin-right: 0; margin-bottom: .5rem; background-color: #007200;">
+          Перейти к оплате
+        </button>
+        <button type="button" class="w-100 btn btn-dark" id="usdt-add-btn" style="margin-right: 0; margin-bottom: .5rem; background-color: #007200;display: none;">
+          Перейти к оплате
+        </button>
+        <button type="button" class="w-100 btn btn-secondary" data-dismiss="modal" style="margin-left: 0;">Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="disModal" tabindex="-1" role="dialog" aria-labelledby="disModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="disModalTitle">Вывод средств</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <p>Для вывода средств, вам необходимо пройти верификацию, отправив заявление на эл почту in24club@mail.ru</p>
+            <a class="w-100 btn btn-dark" href="https://in24.club/static/docs/zayavlenie_IC.pdf?ver=1.1" target="_blank">Скачать заявление</a>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="transModal" tabindex="-1" role="dialog" aria-labelledby="transModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="transModalTitle">Вывод средств</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          
+            <p>Для перевода средств, вам необходимо пройти верификацию, 
+отправив заявление на эл почту in24club@mail.ru. В письме, кроме 
+приложенного заявления, необходимо указать желаемое кодовое слово.</p>
+            <a class="w-100 btn btn-dark" href="https://in24.club/static/docs/zayavlenie_IC.pdf?ver=1.1" target="_blank">Скачать заявление</a>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="confirmModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="confirmModalTitle">Подтверждение операции</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+              <p id="op_type">Тип операции: <span></span></p>
+              <p id="recip" style="display:none;">Получатель: <span></span></p>
+              <p id="op_amount">Сумма: <span></span>$</p>
+
+              <div class="form-group" style="display: none;">
+                  <label for="confirmCodeInput">Кодовое слово</label>
+                  <input type="text" class="form-control form-control-lg text-center" id="confirmCodeInput" name="conf_code_word" aria-describedby="confHelp" placeholder="" autocomplete="nofill">
+              </div>
+              <input type="hidden" id="op_token">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+
+          <button type="button" class="w-50 btn btn-dark" id="conf-btn">Подтвердить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+<div class="modal fade" id="invModal" tabindex="-1" role="dialog" aria-labelledby="invModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="invModalTitle">Внесение средств на депозит</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="inv-form">
+          <div class="form-group">
+            <label for="addAmountInput">Введите сумму</label>
+            <input type="hidden" name="ctrl" value="6cca99a95b6672c407727f71806d9ddd16436">
+            <input type="number" class="form-control form-control-lg text-center" id="invAmountInput" name="amount" min="1&nbsp;000" aria-describedby="disHelp" placeholder="">
+            <small id="invHelp" class="form-text text-muted">Введите сумму для внесения на депозит с текущего счета.
+              Минимальное значение - 1&nbsp;000$.
+            </small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="w-50 btn btn-dark" id="inv-btn">Внести</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="qModal" tabindex="-1" role="dialog" aria-labelledby="qModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="qModalTitle">Задать вопрос</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="q-form">
+          <div class="form-group">
+            <label for="qAmountInput">Введите текст</label>
+            <textarea class="form-control form-control-lg" id="qAmountInput" name="question" rows="5" aria-describedby="disHelp" placeholder="Текст вопроса"></textarea>
+            <small id="qHelp" class="form-text text-muted">Введите текст
+ вашего вопроса. Ответ  будет отправлен в личный кабинет ( Значок " 
+Колокольчик" в верхнем  меню)  в течении  10 дней. Также  напоминаем, 
+что ответы  на многие  вопросы  вы можете  найти  в разделе  FAQ личного
+ кабинета.
+            </small>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+        <button type="button" class="w-50 btn btn-dark" id="q-btn">Отправить</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="buyTimeModal" tabindex="-1" role="dialog" aria-labelledby="buyTimeModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #000000">
+      <div class="modal-header" style="border-bottom: none">
+        <h5 class="modal-title" id="buyTimeModalTitle" style="color: #0F9E5E">ПОКУПКА ЛИЦЕНЗИИ</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color:#ffffff;">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div style="width: 100%; display: flex; justify-content: center; align-items: center" class="buy_time_block">
+          <input type="radio" name="time_duration" id="dur-30" value="30" checked="checked">
+          <label for="dur-30" style="margin-right: 15px">
+            <p>На<br>30 дней</p>
+            <h5>10$</h5>
+          </label>
+          <input type="radio" name="time_duration" id="dur-90" value="90">
+          <label for="dur-90" style="margin-right: 15px">
+            <p>На<br>90 дней</p>
+            <h5>25$</h5>
+          </label>
+          <input type="radio" name="time_duration" id="dur-365" value="365">
+          <label for="dur-365">
+            <p>На<br>365 дней</p>
+            <h5>90$</h5>
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer" style="border-top: none">
+        <a href="#!" class="panel-btn" id="buy-time-btn" style="margin-bottom: 0; background-color: #02FF98; color: #333333!important;text-align: center;">ПРОДЛИТЬ</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="buyTimeSuccessModal" tabindex="-1" role="dialog" aria-labelledby="buyTimeSuccessModalModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="background-color: #000000">
+      <div class="modal-header" style="border-bottom: none">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true" style="color:#ffffff;">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4 style="text-align: center; color: #0F9E5E">Благодарим за покупку!<br>
+            Хороших дивидендов
+            вместе с INVESTMENT CLUB!</h4>
+      </div>
+      <div class="modal-footer" style="border-top: none">
+        <button type="button" class="w-100 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="accDisModal" tabindex="-1" role="dialog" aria-labelledby="accDisModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="accDissModalTitle">Подтверждение аннулирования</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Для подтверждения аннулирования укажите ваше кодовое слово</p>
+            <div class="form-group">
+                  <label for="transCodeInput">Кодовое слово</label>
+                  <input type="text" class="form-control form-control-lg text-center" id="dis_code" name="dis_code_word" aria-describedby="disHelp" placeholder="" autocomplete="nofill">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+
+            <button type="button" class="w-50 btn btn-dark" id="dis-time-btn">Подтвердить</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<div class="modal fade" id="addSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">Заявка на пополнение принята</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Спасибо, Ваша заявка на пополнение
+          текущего счета принята.</h4>
+        <h4>В течении 24 часов после перевода,
+          средства отобразятся на текущем счету
+          личного кабинета.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="usdtAddSuccessModal" tabindex="-1" role="dialog" aria-labelledby="usdtAddModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="usdtAddModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Для пополнения счета переведите сумму в размере</p>
+        <h3 id="usdt-send-amount"></h3>
+        <p>на следующие реквизиты</p>
+        <img src="Investment_files/erc20.png" id="usdt-qr" style="width: 75%;margin-bottom: 20px;">
+        <p id="usdt-address" style="word-break: break-all;">0x3eeb45bf25f28a347c43c4df977bcc69963538a6</p>
+        <a href="#!" id="usdt-copy-btn" style="color: #06CC00; margin-bottom: 30px;" data-value="0x3eeb45bf25f28a347c43c4df977bcc69963538a6" onclick="proceed_copy(this)">скопировать</a>
+        <p class="text-left">Для безопасности платежа, пожалуйста, 
+сверьте реквизиты счета пополнения с официальными реквизитами счета 
+Investment club. Официальные реквизиты можно найти в письме на вашей 
+почте</p>
+        <p class="text-left">Investment Club не несет ответственности за ошибочно проведенные транзакции на другие счета</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Готово</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="depSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">Депозит создан</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Средства были успешно переведены на депозит.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal" onclick="location.reload();">Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="optionModal" tabindex="-1" role="dialog" aria-labelledby="optionModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="optionModalTitle">Создание опциона</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Вы подтверждаете намерение создать опцион?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть</button>
+
+        <button type="button" class="w-50 btn btn-dark" id="option-btn">Подтвердить</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="opSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Операция успешно выполнена.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal" onclick="location.reload();">Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="disSuccessModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalTitle">Заявка зарегистрирована</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Спасибо, ваша заявка принята.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal" onclick="location.reload();">Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="qSuccessModal" tabindex="-1" role="dialog" aria-labelledby="qModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="qModalTitle">Заявка зарегистрирована</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h4>Спасибо, ответ поступит на вашу электронную почту</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal" onclick="location.reload();">Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="modal fade" id="accountModal" tabindex="-1" role="dialog" aria-labelledby="accountModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="accountModalTitle">Не хватает данных</h5>
+        </div>
+        <div class="modal-body">
+          <h5>Для пополнения рабочего счета, вам необходимо указать номера WMR и WMZ кошельков в системе WebMoney.</h5>
+          <br>
+          <form id="account-form">
+            <div class="form-group">
+              <input type="text" class="form-control form-control-lg" id="RaccountInput" name="account" placeholder="WMR кошелек" style="margin-bottom: 15px; border-radius: 0;">
+              <input type="text" class="form-control form-control-lg" id="ZaccountInput" name="account_z" placeholder="WMZ кошелек" style="border-radius: 0;">
+            </div>
+          </form>
+          <h6 style="color: #a0a0a0">Или вы можете перейти в <a href="https://in24.club/demo/" style="color: #333333; border-bottom: dashed 1px #333333; text-decoration: none!important;">Демо-кабинет</a>
+          </h6>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="w-50 btn btn-secondary" id="save-account">Сохранить
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="modal fade" id="nModal" tabindex="-1" role="dialog" aria-labelledby="nModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="nModalTitle">Сообщения от администрации</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="w-50 btn btn-secondary" data-dismiss="modal">Закрыть
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js -->
+<script src="Investment_files/jquery.js" crossorigin="anonymous"></script>
+<script src="Investment_files/popper.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="Investment_files/bootstrap.js"></script>
+<script src="Investment_files/particles.js"></script>
+<script src="Investment_files/clipboard.js"></script>
+<script src="Investment_files/main.js"></script>
+<script>
+  $('#to_reg').on('click', function () {
+    $('#loginModal').modal('hide');
+    $('#registerModal').modal('show');
+  })
+  $('#to_log').on('click', function () {
+    $('#registerModal').modal('hide');
+    $('#loginModal').modal('show');
+  });
+  $('#show_rur_refill').on('click', function () {
+    $('#usdt-input-holder').hide();
+    $('#rur-input-holder').show();
+    $.each($('.refill_system'), function () {
+      $(this).removeClass('active')
+    })
+    $(this).addClass('active')
+    $('#usdt-add-btn').hide();
+    $('#add-btn').show()
+  })
+  $('#show_usdt_refill').on('click', function () {
+      $('#rur-input-holder').hide();
+      $('#usdt-input-holder').show();
+      $.each($('.refill_system'), function () {
+        $(this).removeClass('active')
+      })
+      $(this).addClass('active')
+      $('#add-btn').hide()
+      $('#usdt-add-btn').show()
+  })
+  $('#use_erc').on('click', function () {
+    $.each($('.usdt_system'), function () {
+      $(this).removeClass('active')
+    })
+    $(this).addClass('active')
+    $('#u_system').val('erc20')
+    $('#usdt-qr').attr('src', '/static/images/erc20.png')
+    $('#usdt-address').html('0x3eeb45bf25f28a347c43c4df977bcc69963538a6')
+    $('#usdt-copy-btn').attr('data-value', '0x3eeb45bf25f28a347c43c4df977bcc69963538a6')
+  })
+  $('#use_trc').on('click', function () {
+    $.each($('.usdt_system'), function () {
+      $(this).removeClass('active')
+    })
+    $(this).addClass('active')
+    $('#u_system').val('trc20')
+    $('#usdt-qr').attr('src', '/static/images/trc20.png')
+    $('#usdt-address').html('TPZCMnT54nRw18RGFHFAtCoZMsAj3Nw3vz')
+    $('#usdt-copy-btn').attr('data-value', 'TPZCMnT54nRw18RGFHFAtCoZMsAj3Nw3vz')
+  })
+  $('#show_rur_wthd').on('click', function () {
+      $('#usdt-output-holder').hide();
+      $('#rur-output-holder').show();
+      $.each($('.wthd_system'), function () {
+        $(this).removeClass('active')
+      })
+      $(this).addClass('active')
+      $('#usdt-dis-btn').hide();
+      $('#dis-btn').show()
+    })
+    $('#show_usdt_wthd').on('click', function () {
+      $('#rur-output-holder').hide();
+      $('#usdt-output-holder').show();
+      $.each($('.wthd_system'), function () {
+        $(this).removeClass('active')
+      })
+      $(this).addClass('active')
+      $('#dis-btn').hide()
+      
+    })
+  var clipboard = new ClipboardJS('#copy-btn');
+  clipboard.on('success', function (e) {
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    alert('Партнерская ссылка скопирована')
+    e.clearSelection();
+  });
+
+  $('#q-btn').on('click', function (e) {
+    e.preventDefault();
+    var question = $('#qAmountInput').val();
+    if (question.length == 0) {
+      $('#qAmountInput').addClass('error')
+      return false
+    }
+    $.ajax({
+      type: "post",
+      url: '/ask/',
+      data: $('#q-form').serialize(),
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData.status == 400) {
+          $('#reg-err').html('Введенные данные не верны');
+        } else {
+          $('#qModal').modal('hide');
+          $('#qSuccessModal').modal('show')
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        location.reload()
+      }
+    })
+  })
+  
+    $('#buy-time-btn').on('click', function () {
+      $.ajax({
+        type: "post",
+        url: '/buy_time/',
+        data: {'days': $('input[name=time_duration]:checked').val()},
+        contentType: "application/x-www-form-urlencoded",
+        success: function (responseData, textStatus, jqXHR) {
+          if (responseData === '200') {
+            $('#buyTimeSuccessModal').modal('show');
+          } else {
+            $('#buyTimeModal').modal('hide');
+            alert(responseData)
+          }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          alert('Что-то пошло не так. Попробуйте позже.')
+        }
+      })
+    })
+    $('#buyTimeSuccessModal').on('hidden.bs.modal', function () {
+      location.reload()
+    });
+
+  $('#add-btn').on('click', function (e) {
+    e.preventDefault();
+    var data = {'amount': $('#addAmountInput').val()};
+    var currency = $('#currency-select').val()
+    if (data['amount'] == '') {
+      $('#addAmountInput').addClass('error')
+      return false;
+    }
+    if (parseFloat(data['amount']) < 6500) {
+      $('#addAmountInput').addClass('error')
+      return false;
+    }
+    console.log(data)
+    $.ajax({
+      type: "post",
+      url: '/charge/',
+      data: $('#add-form').serialize(),
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData.status == 400) {
+          $('#reg-err').html('Введенные данные не верны');
+        } else {
+          if (currency === 'RW' || currency === 'DW') {
+            location.href = 'https://wallet.webmoney.ru/logon'
+          } else if (currency === 'RQ') {
+            $('#addModal').modal('hide');
+            location.href = 'https://qiwi.com/n/INVESTMENTCLUB';
+          } else if (currency === 'BTC') {
+            location.href = 'https://login.blockchain.com/#/login'
+          }
+          
+          
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        location.reload()
+      }
+    })
+  })
+  $('#usdt-add-btn').on('click', function (e) {
+      e.preventDefault();
+      var data = { 'amount': $('#UsdtAddAmountInput').val() };
+      var currency = $('#usdt-currency-select').val()
+      var syst = $('#u_system')
+      if (data['amount'] == '') {
+        $('#UsdtAddAmountInput').addClass('error')
+        return false;
+      }
+      if (parseFloat(data['amount']) < 100) {
+        $('#UsdtAddAmountInput').addClass('error')
+        return false;
+      }
+      console.log(data)
+      $.ajax({
+        type: "post",
+        url: '/usdt_charge/',
+        data: $('#usdt-add-form').serialize(),
+        contentType: "application/x-www-form-urlencoded",
+        success: function (responseData, textStatus, jqXHR) {
+          if (responseData.status == 400) {
+            $('#reg-err').html('Введенные данные не верны');
+          } else {
+            $('#usdtAddSuccessModal').modal('show')
+          }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          location.reload()
+        }
+      })
+    })
+    $('#usdtAddSuccessModal').on('hidden.bs.modal', function (event) {
+      $('#addModal').modal('hide')
+      location.reload()
+    })
+  
+    $('#dis-btn').on('click', function (e) {
+      e.preventDefault();
+      $('#disAmountInput').removeClass('error')
+      $('#dis-btn').attr('disabled', 'disabled')
+      var inv_amount = $('#disAmountInput').val()
+      if (inv_amount < 100) {
+        $('#disAmountInput').addClass('error');
+        return false;
+      }
+      $.ajax({
+        type: "post",
+        url: '/withdraw/',
+        data: $('#dis-form').serialize(),
+        contentType: "application/x-www-form-urlencoded",
+        success: function (responseData, textStatus, jqXHR) {
+          if (responseData.status == 400) {
+            setTimeout($('#dis-btn').removeAttr('disabled'), 1000)
+            $('#reg-err').html('Введенные данные не верны');
+          } else if (responseData == '200') {
+            setTimeout($('#dis-btn').removeAttr('disabled'), 1000)
+            $('#disModal').modal('hide');
+            $('#disSuccessModal').modal('show');
+          } else {
+            setTimeout($('#dis-btn').removeAttr('disabled'), 1000)
+            $('#disAmountInput').addClass('error');
+          }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+          location.reload()
+        }
+      })
+    })
+    $('#usdt-dis-btn').on('click', function (e) {
+        e.preventDefault();
+        $('#UsdtDisAmountInput').removeClass('error')
+        $('#usdt-dis-btn').attr('disabled', 'disabled')
+        var inv_amount = $('#UsdtDisAmountInput').val()
+        if (inv_amount < 100) {
+          $('#UsdtDisAmountInput').addClass('error');
+          return false;
+        }
+        $.ajax({
+          type: "post",
+          url: '/usdt_withdraw/',
+          data: $('#usdt-dis-form').serialize(),
+          contentType: "application/x-www-form-urlencoded",
+          success: function (responseData, textStatus, jqXHR) {
+            if (responseData.status == 400) {
+              setTimeout($('#usdt-dis-btn').removeAttr('disabled'), 1000)
+              $('#reg-err').html('Введенные данные не верны');
+            } else if (responseData == '200') {
+              setTimeout($('#usdt-dis-btn').removeAttr('disabled'), 1000)
+              $('#disModal').modal('hide');
+              $('#disSuccessModal').modal('show');
+            } else {
+              setTimeout($('#usdt-dis-btn').removeAttr('disabled'), 1000)
+              $('#disAmountInput').addClass('error');
+            }
+          },
+          error: function (jqXHR, textStatus, errorThrown) {
+            location.reload()
+          }
+        })
+    })
+  
+  $('#inv-btn').on('click', function (e) {
+    e.preventDefault();
+    $('#inv-btn').attr('disabled', 'disabled')
+    $('#invAmountInput').removeClass('error')
+    var inv_amount = $('#invAmountInput').val()
+    if (inv_amount < parseFloat('1 000,00'.replace(',', '.'))) {
+      $('#invAmountInput').addClass('error');
+      setTimeout($('#inv-btn').removeAttr('disabled'), 1000)
+      return false;
+    }
+    $.ajax({
+      type: "post",
+      url: '/deposit/',
+      data: $('#inv-form').serialize(),
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData.status == 400) {
+          $('#reg-err').html('Введенные данные не верны');
+          setTimeout($('#inv-btn').removeAttr('disabled'), 1000)
+        } else {
+          setTimeout($('#inv-btn').removeAttr('disabled'), 1000)
+          $('#invModal').modal('hide');
+          $('#depSuccessModal').modal('show')
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        location.reload()
+      }
+    })
+  })
+
+  $('#option-btn').on('click', function (e) {
+    e.preventDefault();
+    $('#option-btn').attr('disabled', 'disabled')
+    var inv_enought = '0';
+    if (inv_enought === '0') {
+      alert('На вашем текущем счете недостаточно средств');
+      setTimeout($('#option-btn').removeAttr('disabled'), 1000)
+      return false;
+    }
+    $.ajax({
+      type: "post",
+      url: '/option_dep/',
+      data: {'amount': '5000'},
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData.status == 400) {
+          setTimeout($('#option-btn').removeAttr('disabled'), 1000)
+          alert('Что-то пошло не так');
+        } else {
+          setTimeout($('#option-btn').removeAttr('disabled'), 1000)
+          $('#opSuccessModal').modal('show')
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        location.reload()
+      }
+    })
+  })
+  $('#trans-btn').on('click', function (e) {
+    e.preventDefault();
+    $('#trans-btn').attr('disabled', 'disabled')
+    $.ajax({
+      type: "post",
+      url: '/transfer/',
+      data: $('#trans-form').serialize(),
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData !== '200') {
+          alert(responseData);
+          setTimeout($('#trans-btn').removeAttr('disabled'), 1000)
+        } else {
+          location.reload()
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        $('#reg-err').html('Что-то пошло не так. Повторите попытку позднее');
+      }
+    })
+  })
+
+  
+  
+  
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  $('#accounts').on('click', function () {
+    $('.panel_section').hide();
+    $('#accounts_section').fadeIn()
+  })
+  $('#statistics').on('click', function () {
+    $('.panel_section').hide();
+    $('#statistics_section').fadeIn()
+  })
+  $('#faq').on('click', function () {
+    $('.panel_section').hide();
+    $('#faq_section').fadeIn()
+  })
+  $('.faq_btn').on('click', function () {
+    $('.card').removeClass('show');
+    $(this).parents('.card').addClass('show');
+  })
+  $('.custom-control-input').on('click', function () {
+    $('.statictics_holder').hide();
+    var st_type = $(this).attr('id')
+    console.log(st_type)
+    if (st_type == 'statisticsRadio1') {
+      $('#refills').fadeIn();
+    } else if (st_type == 'statisticsRadio2') {
+      $('#deposits').fadeIn();
+    } else if (st_type == 'statisticsRadio3') {
+      $('#income').fadeIn();
+    } else if (st_type == 'statisticsRadio4') {
+      $('#partner_income').fadeIn();
+    } else if (st_type == 'statisticsRadio8') {
+      $('#leader_income').fadeIn();
+    } else if (st_type == 'statisticsRadio5') {
+      $('#withdraw').fadeIn();
+    } else if (st_type == 'statisticsRadio6') {
+      $('#donations').fadeIn();
+    } else if (st_type == 'statisticsRadio7') {
+      $('#crowd_inc').fadeIn();
+    } else if (st_type == 'statisticsRadio10') {
+      $('#opts_inc').fadeIn();
+    } else if (st_type == 'statisticsRadio9') {
+      $('#transfers_inc').fadeIn();
+    } else if (st_type == 'statisticsRadio11') {
+      $('#payments').fadeIn();
+    } else if (st_type == 'statisticsRadio12') {
+      $('#transfers_out').fadeIn();
+    } else if (st_type == 'refillRadio1') {
+      var curr_num = 'P303461064898'
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2) + '$')
+      $('#in_rub').html(pre_amount + ' рублей')
+      $('#AmountHiddenInput').val((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2))
+    } else if (st_type == 'refillRadio2') {
+      var curr_num = 'Z929165930496'
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html(pre_amount + '$')
+      $('#in_rub').html(pre_amount + ' долларов')
+      $('#AmountHiddenInput').val(pre_amount)
+    }
+  })
+  $('#UsdtAddAmountInput').on('keyup', function () {
+    var pre_amount = $(this).val()
+    if (!pre_amount) {
+      var pre_amount = 0
+    }
+    if (pre_amount < 100) {
+      var pre_amount = 0
+    }
+    pre_amount = pre_amount - (pre_amount * 0.025)
+    $('#usdt_true_amount').html(pre_amount + ' USDT')
+    $('#UsdtAmountHiddenInput').val(pre_amount)
+  })
+  $('#UsdtDisAmountInput').on('keyup', function () {
+      var pre_amount = $(this).val()
+      if (!pre_amount) {
+        var pre_amount = 0
+      }
+      if (pre_amount < 100) {
+        var pre_amount = 0
+      }
+      pre_amount = pre_amount - (pre_amount * 0.025)
+      $('#usdt_dis_true_amount').html(pre_amount + ' USDT')
+      $('#UsdtDisAmountHiddenInput').val(pre_amount)
+    })
+  $('#addAmountInput').on('keyup', function () {
+    var currency = $('#currency-select').val();
+    if (currency === 'DW') {
+      var curr_num = 'Z929165930496'
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html(pre_amount + '$')
+      $('#in_rub').html(pre_amount + ' долларов')
+      $('#AmountHiddenInput').val(pre_amount)
+    } else if (currency === 'RW') {
+      var curr_num = 'P303461064898'
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2) + '$')
+      $('#in_rub').html(pre_amount + ' рублей')
+      $('#AmountHiddenInput').val((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2))
+    } else if (currency === 'RQ') {
+      var curr_num = '79130300680';
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2) + '$')
+      $('#in_rub').html(pre_amount + ' рублей')
+      $('#AmountHiddenInput').val((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2))
+    } else if (currency === 'BTC') {
+      var curr_num = '1b8G2MQVUkpejxk31R2hww6aAzCsnVTnk';
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      console.log(parseFloat('8 500,00'.replace(/\s/g, '')));
+      $('#true_amount').html((parseFloat(pre_amount) * parseFloat('8 500,00'.replace(/\s/g, '').replace(',', '.'))).toFixed(2) + '$')
+      $('#in_rub').html(pre_amount + 'BTC')
+      $('#AmountHiddenInput').val((parseFloat(pre_amount) * parseFloat('8 500,00'.replace(/\s/g, '').replace(',', '.'))).toFixed(2))
+    }
+  })
+  
+
+  $.each($('.rate-holder'), function () {
+    var rate_instance = parseFloat($(this).html().replace(',', '.'));
+    $(this).html(rate_instance * 100 + '%')
+  })
+
+  $('#dis-time-btn').on('click', function () {
+    $.ajax({
+      type: "post",
+      url: '/acc_disable/',
+      data: {'code': $('#dis_code').val()},
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData.status == 400) {
+          alert('Что-то пошло не так. Попробуйте позже')
+        } else if (responseData == '200') {
+          location.reload()
+        } else {
+          location.reload()
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        location.reload()
+      }
+    })
+  })
+
+  $('#nModal').on('shown.bs.modal', function (e) {
+    $.ajax({
+      type: "post",
+      url: '/mark_as_read/',
+      data: 'none',
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData.status == 400) {
+          $('#reg-err').html('Введенные данные не верны');
+        } else {
+          console.log('marked')
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        location.reload()
+      }
+    })
+  })
+
+  $('#nModal').on('hidden.bs.modal', function (e) {
+    $('#n-badge').hide();
+    $('#q-button').attr('style', '    border: none;font-size: 25px;padding: 0;margin-left:1rem;')
+  })
+  $('#checkbox-1').on('change', function () {
+    var a_type = '';
+    if ($(this).prop('checked')) {
+      a_type = 'arm'
+    } else {
+      a_type = 'disarm'
+    }
+    $.ajax({
+      type: "post",
+      url: '/set_reinvest/',
+      data: {'type': a_type,},
+      contentType: "application/x-www-form-urlencoded",
+      success: function (responseData, textStatus, jqXHR) {
+        if (responseData.status == 400) {
+          $('#reg-err').html('Введенные данные не верны');
+        } else {
+          console.log('set')
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        location.reload()
+      }
+    })
+  })
+  $('#currency-select').on('change', function () {
+    var currency = $(this).val();
+    if (currency === 'DW') {
+      var curr_num = 'Z929165930496'
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html(pre_amount + '$')
+      $('#in_rub').html(pre_amount + ' долларов')
+      $('#AmountHiddenInput').val(pre_amount)
+      $('#rate-holder').hide();
+      $('#target-btn').attr('data-clipboard-text', 'Z929165930496')
+    } else if (currency === 'RW') {
+      var curr_num = 'P303461064898'
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2) + '$')
+      $('#in_rub').html(pre_amount + ' рублей')
+      $('#AmountHiddenInput').val((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2))
+      var rate = '76,50';
+      $('#rate-holder').html('курс 1$ = ' + rate + ' руб.').show()
+      $('#target-btn').attr('data-clipboard-text', 'P303461064898')
+    } else if (currency === 'RQ') {
+      var curr_num = '79130300680';
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      $('#true_amount').html((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2) + '$')
+      $('#in_rub').html(pre_amount + ' рублей')
+      $('#AmountHiddenInput').val((parseFloat(pre_amount) / parseFloat('76,50'.replace(',', '.'))).toFixed(2))
+      var rate = '76,50';
+      $('#rate-holder').html('курс 1$ = ' + rate + ' руб.').show()
+      $('#target-btn').attr('data-clipboard-text', '79130300680')
+    } else if (currency === 'BTC') {
+      var curr_num = '1b8G2MQVUkpejxk31R2hww6aAzCsnVTnk';
+      $('#curr-num').html(curr_num)
+      var pre_amount = $('#addAmountInput').val();
+      if (!pre_amount) {
+        pre_amount = 0
+      }
+      console.log(parseFloat('8 500,00'.replace(/\s/g, '')));
+      $('#true_amount').html((parseFloat(pre_amount) * parseFloat('8 500,00'.replace(/\s/g, '').replace(',', '.'))).toFixed(2) + '$')
+      $('#in_rub').html(pre_amount + 'BTC')
+      $('#AmountHiddenInput').val((parseFloat(pre_amount) * parseFloat('8 500,00'.replace(/\s/g, '').replace(',', '.'))).toFixed(2))
+      var rate = '8 500,00';
+      $('#rate-holder').html('курс 1BTC = ' + rate + '$').show()
+      $('#target-btn').attr('data-clipboard-text', '1b8G2MQVUkpejxk31R2hww6aAzCsnVTnk')
+    }
+  });
+
+  function fallbackCopyTextToClipboard(text) {
+    var textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      var successful = document.execCommand("copy");
+      var msg = successful ? "successful" : "unsuccessful";
+      console.log("Fallback: Copying text command was " + msg);
+    } catch (err) {
+      console.error("Fallback: Oops, unable to copy", err);
+    }
+
+    document.body.removeChild(textArea);
+  }
+
+  function copyTextToClipboard(text) {
+    if (!navigator.clipboard) {
+      fallbackCopyTextToClipboard(text);
+      return;
+    }
+    navigator.clipboard.writeText(text).then(
+      function () {
+        alert("Номер кошелька успешно скопирован");
+      },
+      function (err) {
+        alert("Не получилось скопировать. Попробуйте сделать это вручную");
+      }
+    );
+  }
+  function proceed_copy(obj) {
+    var val = obj.getAttribute('data-value')
+    var res = copyTextToClipboard(val);
+  }
+  $('#target-btn').on('click', function () {
+    var text = $('#curr-num').html()
+    copyTextToClipboard(text)
+  })
+</script>
+
+
+</body></html>

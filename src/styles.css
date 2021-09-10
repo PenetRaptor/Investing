@@ -4,9 +4,11 @@
 	padding: 0;
 	text-decoration: none;
 	list-style-type: none;
+	font-family: 'Rubik', sans-serif;
 }
 
-.header__menu, .module-1__content{
+.container{
 	max-width: 1200px;
 	margin: 0 auto;
 }
+

@@ -1,6 +1,6 @@
 .header{
     width: 100%;
-    padding: 15px 0 15px 0;
+    padding: 25px 0 25px 0;
     background-color: rgba(51,51,51,1);
     
 }
@@ -22,12 +22,12 @@
 .main-menu__elem{
     font-family: 'Rubik', sans-serif;
     font-size: 1.3em;
-    margin: 5px;
+    margin: 0 5px 0 5px;
     color: ghostwhite;
 }
 .main-menu__elem:hover{
     font-family: 'Rubik', sans-serif;
-    margin: 5px;
+    margin: 0 5px 0 5px;
     color: rgb(87, 207, 255);
     transition: 150ms;
 }

@@ -1,0 +1,23 @@
+.module-2__content{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.module-2__item{
+    width: 600px;
+}
+
+.title{
+    color: black;
+    font-weight: normal;
+    font-size: 45px;
+    padding-bottom: 35px;
+}
+
+.about{
+    color: black;
+    font-weight: lighter;
+    font-size: 20px;
+}

@@ -1,6 +1,48 @@
 .module-1{
-    display: flex;
     background-color: gray;
-    padding: 15px 0 15px 0;
+    padding: 50px 0 50px 0;
     width: 100%;
+}
+
+.module-1__content{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.subTitle{
+    color: ghostwhite;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.title{
+    color: ghostwhite;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.module-1__registrationForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.regForm{
+    color:#000;
+    border:1px solid #000;
+    background-color:#fff;
+    font-size:16px;
+    font-weight:400;
+    height:15px;
+    width: 400px;
+    padding: 15px;
+    margin-bottom: 14px;
+}
+.regConfirm{
+    background-color: rgb(17, 17, 17);
+    color: ghostwhite;
+    font-weight: lighter;
+    font-size: 20px;
+    height: 60px;
+    padding: 10px;
 }

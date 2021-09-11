@@ -5,8 +5,12 @@
     align-items: center;
 }
 
-.module-2__item{
-    width: 600px;
+.module-2__img{
+    width: 500px;
+}
+
+.module-2__text{
+    width: 700px;
 }
 
 .title{

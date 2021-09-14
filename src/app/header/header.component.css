@@ -20,13 +20,11 @@
     justify-content: space-between;
 }
 .main-menu__elem{
-    font-family: 'Rubik', sans-serif;
     font-size: 1.3em;
     margin: 0 5px 0 5px;
     color: ghostwhite;
 }
 .main-menu__elem:hover{
-    font-family: 'Rubik', sans-serif;
     margin: 0 5px 0 5px;
     color: rgb(87, 207, 255);
     transition: 150ms;

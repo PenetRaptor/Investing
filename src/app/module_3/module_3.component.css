@@ -1,0 +1,22 @@
+.module-3{
+    background-color: rgb(226, 226, 226);
+    padding: 75px 0 75px 0;
+}
+
+.module-3__content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subTitle{
+    color: black;
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.title{
+    color: black;
+    font-weight: bold;
+    font-size: 45px;
+}

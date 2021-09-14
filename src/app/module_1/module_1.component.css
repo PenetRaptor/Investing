@@ -1,6 +1,6 @@
 .module-1{
     background-color: gray;
-    padding: 50px 0 50px 0;
+    padding: 75px 0 75px 0;
     width: 100%;
 }
 
@@ -12,13 +12,13 @@
 
 .subTitle{
     color: ghostwhite;
-    font-weight: lighter;
+    font-weight: normal;
     font-size: 20px;
 }
 
 .title{
+    font-weight: bolder;
     color: ghostwhite;
-    font-weight: bold;
     font-size: 45px;
 }
 
@@ -32,17 +32,16 @@
     border:1px solid #000;
     background-color:#fff;
     font-size:16px;
-    font-weight:400;
     height:15px;
     width: 400px;
     padding: 15px;
     margin-bottom: 14px;
 }
 .regConfirm{
-    background-color: rgb(17, 17, 17);
-    color: ghostwhite;
     font-weight: lighter;
     font-size: 20px;
+    background-color: rgb(17, 17, 17);
+    color: ghostwhite;
     height: 60px;
     padding: 10px;
 }

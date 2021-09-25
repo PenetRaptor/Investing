@@ -19,13 +19,16 @@
     color: black;
     font-weight: bold;
     font-size: 45px;
+    padding-bottom: 50px;
 }
 
 .subTitle{
     color: black;
     font-weight: lighter;
-    font-size: 20px;
+    font-size: 24px;
     padding-bottom: 70px;
+    width: 50%;
+    text-align: center;
 }
 
 .module-3__blockZone{
